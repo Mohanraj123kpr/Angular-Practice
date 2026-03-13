@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<div>
+    <h1>Welcome to Movie Mania!</h1>
+    <p>Discover the latest movies, top-rated films, and upcoming releases all in one place. Whether you're a fan of action, comedy, drama, or horror, Movie Mania has something for everyone. Start exploring now and find your next favorite movie!</p>
+</div>
+
+<div>
+    <input type="text" [(ngModel)]="searchText" (ngModelChange)="debouncedSearch()">
+</div>
+
+<div>
+    @for (movie of filteredMovies; track $index) {
+    <div class="movie-card">
+        <img src="movie.info['image_url']" alt="movie.title">
+        <div class="movie-card-bottom">
+            <h2>{{ movie.title }}</h2>
+            <p>Release Date: {{ movie.year }}</p>
+            <p>Rating: {{ movie.info['rating'] }}</p>
+        </div>
+    </div>
+    }
+</div>

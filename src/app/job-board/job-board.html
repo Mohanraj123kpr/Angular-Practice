@@ -1,0 +1,18 @@
+<h2>Hacker News Job Board</h2>
+<div>
+    @for (job of jobs(); track $index) {
+        <mat-card style="margin-top: 10px; background-color: white;">
+            <div style="display: flex; flex-direction: column; padding: 10px;">
+                <ng-container>
+                    <p style="font-weight: 500;">{{ job.title }}</p>
+                </ng-container>
+                <div style="display: flex; font-weight: 300;">
+                    <p>By {{job.by}}</p>
+                    <p>. {{job.time | date:"MMM dd, yyyy 'at' hh:mm a"}} </p>
+                    <p></p>
+                </div>
+            </div>
+        </mat-card>
+    }
+    <button [disabled]="jobs().length >= jobIds.length" matButton (click)="loadMore()">Load More</button>
+</div>

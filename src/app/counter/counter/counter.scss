@@ -1,0 +1,13 @@
+.available-item {
+  color: green;
+  font-weight: bold;
+}
+
+.out-of-stock {
+  color: red;
+  text-decoration: line-through;
+}
+
+.zero-count-msg {
+  font-style: italic;
+}

@@ -1,0 +1,84 @@
+<h2>User Form</h2>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <label for="name">Name: </label>
+  <input type="text" id="name" formControlName="name" />
+  <label for="mail">Email</label>
+  <input type="email" id="mail" formControlName="email" />
+  <label for="age">Age: </label>
+  <input type="number" id="age" formControlName="age" />
+  <button type="submit" [disabled]="userForm.invalid">Add Row</button>
+</form>
+
+<h2>Search</h2>
+<input type="text" [(ngModel)]="searchText" placeholder="search" />
+
+<h2>Table</h2>
+<table border="1">
+  <thead>
+    <tr>
+      @for (col of columns; track col.field) {
+        <th>{{ col.header }}</th>
+      }
+    </tr>
+  </thead>
+  <tbody>
+    @for (user of filteredUsers; track user.id) {
+      <tr>
+        @for (col of columns; track col.field) {
+          <td>{{ user[col.field] }}</td>
+        }
+        <td>
+          <button (click)="deleteRow(user.id)">Delete</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<div style="margin-top: 20px">
+  <form [formGroup]="taskForm" (ngSubmit)="submit()">
+    <input formControlName="name" type="text" />
+    <button type="submit" [disabled]="!taskForm.valid">Add Task</button>
+  </form>
+</div>
+
+<ul>
+  @for (item of tasks; track item.id) {
+    <li>
+      {{ item.name }}
+      <button (click)="deleteTask(item.id)">Delete</button>
+    </li>
+  }
+</ul>
+
+<div style="display: flex; justify-content: left;">
+  <app-job-board></app-job-board>
+</div>
+
+<div style="display: flex; justify-content: left;">
+  <app-tabs-content [tabs]="tabsDetails"></app-tabs-content>
+</div>
+
+
+<div class="container">
+  <div class="card">
+    <img src="https://via.placeholder.com/200">
+    <h3>Product 1</h3>
+    <p>Product description</p>
+    <button>View</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/200">
+    <h3>Product 2</h3>
+    <p>Product description</p>
+    <button>View</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/200">
+    <h3>Product 3</h3>
+    <p>Product description</p>
+    <button>View</button>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #222;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.cta {
+  padding: 10px 20px;
+  background: blue;
+  color: white;
+  border: none;
+}
+
+
+.hero {
+  text-align: center;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+  .feature {
+    border: 1px solid;
+    padding: 20px;
+  }
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #222;
+  color: white;
+}

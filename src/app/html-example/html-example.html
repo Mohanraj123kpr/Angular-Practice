@@ -1,0 +1,41 @@
+<header class="header">
+  <nav class="navbar">
+    <h1 class="logo">MyProduct</h1>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><button aria-label="Sign up for account" class="btn">Sign Up</button></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Build Amazing Products</h2>
+  <p>Modern tools for developers and teams.</p>
+  <button class="cta">Learn More</button>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <h3>Fast</h3>
+    <p>Optimized for performance.</p>
+  </div>
+  <div class="feature">
+    <h3>Secure</h3>
+    <p>Enterprise level security.</p>
+  </div>
+
+  <div class="feature">
+    <h3>Scalable</h3>
+    <p>Grow your business easily.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 MyProduct</p>
+</footer>
+
+@for (user of users; track $index) {
+    <li>{{user.name}}</li>
+}
