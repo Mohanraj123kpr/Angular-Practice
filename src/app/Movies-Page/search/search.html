@@ -12,7 +12,7 @@
 <div>
     @for (movie of filteredMovies; track $index) {
     <div class="movie-card">
-        <img src="movie.info['image_url']" alt="movie.title">
+        <img [src]="movie.info['image_url']" alt="movie.title">
         <div class="movie-card-bottom">
             <h2>{{ movie.title }}</h2>
             <p>Release Date: {{ movie.year }}</p>

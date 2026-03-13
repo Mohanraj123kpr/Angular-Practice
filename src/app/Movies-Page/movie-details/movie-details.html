@@ -1,1 +1,16 @@
-<p>movie-details works!</p>
+<app-header></app-header>
+
+@if (movie()) {
+  <div class="movie-details">
+    <h1>{{ movie().title }}</h1>
+    <img [src]="movie().info['image_url']" [alt]="movie().title" />
+    <p><strong>Release Year:</strong> {{ movie().year }}</p>
+    <p><strong>Rating:</strong> {{ movie().info['rating'] }}</p>
+    <p><strong>Plot:</strong> {{ movie().info['plot'] }}</p>
+    <p><strong>Genres:</strong> {{ movie().info['genres']?.join(', ') }}</p>
+    <p><strong>Directors:</strong> {{ movie().info['directors']?.join(', ') }}</p>
+    <p><strong>Actors:</strong> {{ movie().info['actors']?.join(', ') }}</p>
+  </div>
+} @else {
+  <p>Loading movie details...</p>
+}
