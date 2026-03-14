@@ -1,0 +1,9 @@
+<app-header></app-header>
+<h2>Product Details</h2>
+<div>
+    @if (selectedProduct) {
+        <p>{{ selectedProduct.name }}</p>
+        <p>{{ selectedProduct.description }}</p>
+        <p>Price: ${{ selectedProduct.price }}</p>
+    }
+</div>

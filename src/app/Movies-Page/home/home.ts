@@ -1,10 +1,10 @@
 import { Component, inject, signal } from '@angular/core';
 import { MovieService } from '../../movie-service';
 import { Header } from "../header/header";
-import { Router, RouterLink } from "@angular/router";
+import { Router } from "@angular/router";
 @Component({
   selector: 'app-home',
-  imports: [Header, RouterLink],
+  imports: [Header],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

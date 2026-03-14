@@ -1,0 +1,153 @@
+:host {
+  display: block;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+.filters-container {
+  background: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+
+  label {
+    font-weight: 600;
+    color: #333;
+    margin-right: 8px;
+  }
+
+  select, input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+  }
+
+  select {
+    min-width: 150px;
+    cursor: pointer;
+  }
+
+  input[type="text"] {
+    min-width: 250px;
+  }
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  
+  .product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    p {
+      margin: 5px 0;
+      color: #555;
+      
+      &:first-of-type {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+      }
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #0056b3;
+        text-decoration: underline;
+      }
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+
+      button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s;
+
+        &:first-child, &:nth-child(3) {
+          background: #f0f0f0;
+          color: #333;
+          width: 36px;
+          height: 36px;
+          font-size: 18px;
+
+          &:hover {
+            background: #e0e0e0;
+          }
+
+          &:active {
+            transform: scale(0.95);
+          }
+        }
+      }
+    }
+
+    > div:last-child button {
+      background: #28a745;
+      color: white;
+      flex: 1;
+      padding: 10px;
+
+      &:hover {
+        background: #218838;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-container {
+    flex-direction: column;
+    align-items: stretch;
+
+    select, input {
+      width: 100%;
+    }
+  }
+}

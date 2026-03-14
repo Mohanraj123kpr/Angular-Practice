@@ -1,0 +1,20 @@
+<app-header></app-header>
+@if (cartItems().length > 0) {
+  <div class="cart-container">
+    @for (item of cartItems(); track $index) {
+      <ng-container>
+        <div class="cart-item">
+          <h3>Name: {{ item.product.name }}</h3>
+          <p>Quantity: {{ item.quantity }}</p>
+          <p>Price: {{ item.quantity * item.product.price | number:'1.2-2'}}</p>
+          <button (click)="decrement(item)">-</button>{{ item.quantity
+          }}<button (click)="increment(item)">+</button>
+        </div>
+      </ng-container>
+    }
+  </div>
+} @else {
+  <div class="empty-text">
+    <h2>Cart is empty!!</h2>
+  </div>
+}

@@ -1,8 +1,9 @@
 <header>
   <nav>
     <ul class="header-item">
-      <li><a routerLink="/">home</a></li>
-      <li><a routerLink="/search">Search</a></li>
+      @for (item of navItems(); track item.route) {
+        <li><a [routerLink]="item.route">{{ item.label }}</a></li>
+      }
     </ul>
   </nav>
 </header>

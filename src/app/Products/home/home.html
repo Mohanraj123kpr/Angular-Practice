@@ -1,0 +1,33 @@
+<app-header [navItems]="headerItems()"></app-header>
+<div class="filters-container">
+  <div>
+    <label for="cats">Category:</label>
+    <select type="select" id="cats" [(ngModel)]="selectedCategory" (ngModelChange)="onFilterChange()">
+      @for (option of categories(); track $index) {
+        <option [value]="option">{{ option }}</option>
+      }
+    </select>
+  </div>
+  <div>
+    <label for="search">Search:</label>
+    <input type="text" id="search" placeholder="Search products..." [(ngModel)]="searchText" (ngModelChange)="onSeachChange()"/>
+  </div>
+</div>
+<div class="products">
+  @for (item of products(); track item.id) {
+    <div class="product-card">
+      <!-- <img [src]="item.image" /> -->
+      <p>Name: {{ item.name }}</p>
+      <p>Description: {{ item.description }}</p>
+      <p>Price: {{ item.price }}</p>
+      <p>Stock: {{ item.stock }}</p>
+      <a href="" (click)="navigateDetails(item, $event)">Details</a>
+      <div>
+        <button (click)="decrement(item.id)">-</button> {{ getCount(item.id) }} <button (click)="increment(item.id)">+</button>
+      </div>
+      <div>
+        <button (click)="addToCart(item)">AddToCart</button>
+      </div>
+    </div>
+  }
+</div>

@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "id": "p1",
+      "name": "Wireless Headphones",
+      "category": "Electronics",
+      "price": 79.99,
+      "rating": 4.5,
+      "stock": 15,
+      "image": "https://via.placeholder.com/300x200?text=Headphones",
+      "description": "High-quality wireless headphones with noise cancellation"
+    },
+    {
+      "id": "p2",
+      "name": "Running Shoes",
+      "category": "Sports",
+      "price": 129.99,
+      "rating": 4.8,
+      "stock": 8,
+      "image": "https://via.placeholder.com/300x200?text=Shoes",
+      "description": "Comfortable running shoes for all terrains"
+    },
+    {
+      "id": "p3",
+      "name": "Coffee Maker",
+      "category": "Home",
+      "price": 49.99,
+      "rating": 4.2,
+      "stock": 20,
+      "image": "https://via.placeholder.com/300x200?text=Coffee",
+      "description": "Programmable coffee maker with timer"
+    },
+    {
+      "id": "p4",
+      "name": "Yoga Mat",
+      "category": "Sports",
+      "price": 24.99,
+      "rating": 4.6,
+      "stock": 30,
+      "image": "https://via.placeholder.com/300x200?text=Yoga",
+      "description": "Non-slip yoga mat with carrying strap"
+    },
+    {
+      "id": "p5",
+      "name": "Smart Watch",
+      "category": "Electronics",
+      "price": 199.99,
+      "rating": 4.7,
+      "stock": 12,
+      "image": "https://via.placeholder.com/300x200?text=Watch",
+      "description": "Fitness tracking smart watch with heart rate monitor"
+    },
+    {
+      "id": "p6",
+      "name": "Desk Lamp",
+      "category": "Home",
+      "price": 34.99,
+      "rating": 4.3,
+      "stock": 25,
+      "image": "https://via.placeholder.com/300x200?text=Lamp",
+      "description": "LED desk lamp with adjustable brightness"
+    },
+    {
+      "id": "p7",
+      "name": "Bluetooth Speaker",
+      "category": "Electronics",
+      "price": 59.99,
+      "rating": 4.4,
+      "stock": 18,
+      "image": "https://via.placeholder.com/300x200?text=Speaker",
+      "description": "Portable waterproof bluetooth speaker"
+    },
+    {
+      "id": "p8",
+      "name": "Backpack",
+      "category": "Sports",
+      "price": 44.99,
+      "rating": 4.5,
+      "stock": 22,
+      "image": "https://via.placeholder.com/300x200?text=Backpack",
+      "description": "Durable hiking backpack with multiple compartments"
+    }
+  ]
+}

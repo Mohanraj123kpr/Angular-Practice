@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators, FormsModule } from '@angular/forms';
-import { JsonPipe } from '@angular/common';
 import { JobBoard } from '../../job-board/job-board';
 import { TabsContent } from "../../tabs-content/tabs-content";
 @Component({
   selector: 'app-table-example',
-  imports: [ReactiveFormsModule, JsonPipe, FormsModule, JobBoard, TabsContent],
+  imports: [ReactiveFormsModule, FormsModule, JobBoard, TabsContent],
   templateUrl: './table-example.html',
   styleUrl: './table-example.scss',
 })
