@@ -1,0 +1,54 @@
+{
+  "tasks": [
+    {
+      "id": "t1",
+      "title": "Complete Angular project",
+      "description": "Finish the movie app with all features",
+      "priority": "high",
+      "status": "in-progress",
+      "dueDate": "2026-03-20",
+      "createdAt": "2026-03-10",
+      "tags": ["work", "coding"]
+    },
+    {
+      "id": "t2",
+      "title": "Buy groceries",
+      "description": "Milk, eggs, bread, vegetables",
+      "priority": "medium",
+      "status": "pending",
+      "dueDate": "2026-03-14",
+      "createdAt": "2026-03-13",
+      "tags": ["personal", "shopping"]
+    },
+    {
+      "id": "t3",
+      "title": "Gym workout",
+      "description": "Leg day - squats and lunges",
+      "priority": "low",
+      "status": "completed",
+      "dueDate": "2026-03-13",
+      "createdAt": "2026-03-12",
+      "tags": ["health", "fitness"]
+    },
+    {
+      "id": "t4",
+      "title": "Team meeting",
+      "description": "Discuss Q2 goals and project timeline",
+      "priority": "high",
+      "status": "pending",
+      "dueDate": "2026-03-15",
+      "createdAt": "2026-03-11",
+      "tags": ["work", "meeting"]
+    },
+    {
+      "id": "t5",
+      "title": "Read book",
+      "description": "Finish reading 'Clean Code'",
+      "priority": "low",
+      "status": "in-progress",
+      "dueDate": "2026-03-25",
+      "createdAt": "2026-03-05",
+      "tags": ["personal", "learning"]
+    }
+  ]
+}
